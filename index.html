@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ==================== SEO & META ==================== -->
+    <title>SmartFaith — Grandis dans la foi, un verset à la fois</title>
+    <meta name="description" content="SmartFaith est une application gratuite pour grandir dans la foi : 1500+ versets, 1000+ questions bibliques, 50+ histoires inspirantes et des découvertes fascinantes. 100% gratuit, 90% hors connexion.">
+    <link rel="canonical" href="https://smartfaith.app">
+
+    <!-- Open Graph -->
+    <meta property="og:title"       content="SmartFaith — Grandis dans la foi, un verset à la fois">
+    <meta property="og:description" content="1500+ versets, 1000+ questions bibliques, 50+ histoires inspirantes. 100% gratuit, 90% hors connexion.">
+    <meta property="og:image"       content="https://smartfaith.app/img/logo.png">
+    <meta property="og:url"         content="https://smartfaith.app">
+    <meta property="og:type"        content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="SmartFaith — Grandis dans la foi">
+    <meta name="twitter:description" content="1500+ versets, 1000+ questions bibliques, 50+ histoires inspirantes.">
+    <meta name="twitter:image"       content="https://smartfaith.app/img/logo.png">
+
+    <!-- ==================== PRECONNECTS ==================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ==================== JSON-LD STRUCTURED DATA ==================== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SmartFaith",
+        "description": "Application gratuite pour grandir dans la foi : versets, quiz bibliques, histoires, prières et découvertes",
+        "operatingSystem": "Android",
+        "applicationCategory": "LifestyleApplication",
+        "downloadUrl": "https://smartfaith.app/smartFaith.apk",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ==================== PROGRESS BAR TOP ==================== -->
+    <div class="progress-bar-top" id="progress-bar-top"></div>
+
+    <!-- ==================== PARTICULES DORÉES (background) ==================== -->
+    <div id="particles-bg" aria-hidden="true"></div>
+
+    <!-- ==================== BULLES DE MOTS (background) ==================== -->
+    <div id="bubbles-bg" aria-hidden="true"></div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <header class="nav" id="nav" role="banner">
+        <div class="container nav__container">
+            <a href="#" class="nav__logo">
+                <img src="img/logo.png" alt="SmartFaith" class="nav__logo-img">
+                <span>SmartFaith</span>
+            </a>
+
+            <nav class="nav__menu" role="navigation" aria-label="Navigation principale">
+                <ul class="nav__list">
+                    <li><a href="#verset"   class="nav__link">Verset du jour</a></li>
+                    <li><a href="#pourquoi" class="nav__link">Pourquoi</a></li>
+                    <li><a href="#decouvertes" class="nav__link">Découvertes</a></li>
+                    <li><a href="#parcours" class="nav__link">Parcours</a></li>
+                    <li><a href="#galerie"  class="nav__link">Aperçu</a></li>
+                    <li><a href="#faq"      class="nav__link">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Changer le thème">
+                    <i data-lucide="sun" class="theme-toggle__sun"></i>
+                    <i data-lucide="moon" class="theme-toggle__moon"></i>
+                </button>
+
+                <a href="#telechargement" class="btn btn-primary nav__download-btn">
+                    <i data-lucide="download"></i>
+                    <span>Télécharger</span>
+                </a>
+            </div>
+
+            <button class="nav__burger" aria-label="Menu mobile">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ==================== HERO ==================== -->
+        <section class="hero" id="hero">
+            <!-- Aurora gradient background -->
+            <div class="hero__aurora" aria-hidden="true"></div>
+
+            <div class="container hero__container">
+
+                <div class="hero__content">
+                    <div class="hero__pill">
+                        <span class="hero__pill-dot"></span>
+                        Application gratuite · Android
+                    </div>
+
+                    <h1 class="hero__title">
+                        Grandis dans la foi<br>
+                        <span class="hero__title-gradient">un verset à la fois</span>
+                    </h1>
+
+                    <p class="hero__subtitle">
+                        1500+ versets, 1000+ questions bibliques, 50+ histoires inspirantes
+                        et des découvertes fascinantes sur la Bible.
+                        100% gratuit, 90% hors connexion.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="./smartFaith.apk" class="btn btn-primary btn-lg" download>
+                            <i data-lucide="download"></i>
+                            Télécharger SmartFaith
+                        </a>
+                        <a href="#pourquoi" class="btn btn-ghost btn-lg">
+                            <i data-lucide="info"></i>
+                            En savoir plus
+                        </a>
+                    </div>
+
+                    <div class="hero__stats">
+                        <div class="hero__stat">
+                            <span class="hero__stat-number" data-count="1500" data-suffix="+">1500+</span>
+                            <span class="hero__stat-label">Versets</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number" data-count="1000" data-suffix="+">1000+</span>
+                            <span class="hero__stat-label">Questions</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number" data-count="50" data-suffix="+">50+</span>
+                            <span class="hero__stat-label">Histoires</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number">100%</span>
+                            <span class="hero__stat-label">Gratuit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone mockup -->
+                <div class="hero__mockup-wrapper">
+                    <div class="phone-mockup">
+                        <div class="phone-mockup__frame">
+                            <div class="phone-mockup__notch"></div>
+                            <div class="phone-mockup__screen">
+                                <img id="phone-screenshot" class="phone-mockup__screenshot"
+                                     src="img/home.png"
+                                     alt="Capture d'écran SmartFaith">
+                            </div>
+                        </div>
+                        <div class="phone-mockup__controls">
+                            <button class="phone-mockup__arrow" id="phone-prev" aria-label="Précédent">
+                                <i data-lucide="chevron-left"></i>
+                            </button>
+                            <div class="phone-mockup__dots" id="phone-dots"></div>
+                            <button class="phone-mockup__arrow" id="phone-next" aria-label="Suivant">
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== TRUST STRIP ==================== -->
+        <div class="trust-strip" role="list" aria-label="Points forts">
+            <div class="container trust-strip__inner">
+                <div class="trust-strip__item" role="listitem">
+                    <i data-lucide="heart"></i>
+                    <span>100% Gratuit, sans abonnement</span>
+                </div>
+                <div class="trust-strip__item" role="listitem">
+                    <i data-lucide="wifi-off"></i>
+                    <span>90% Hors connexion</span>
+                </div>
+                <div class="trust-strip__item" role="listitem">
+                    <i data-lucide="smartphone"></i>
+                    <span>Android · iOS à venir</span>
+                </div>
+                <div class="trust-strip__item" role="listitem">
+                    <i data-lucide="book-open"></i>
+                    <span>1500+ versets disponibles</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== VERSET DU JOUR ==================== -->
+        <section class="verse-of-day" id="verset">
+            <div class="container">
+                <div class="verse-card">
+                    <div class="verse-card__header">
+                        <span class="verse-card__label">
+                            <i data-lucide="bookmark"></i>
+                            Verset du jour
+                        </span>
+                        <span class="verse-card__date" id="verse-date">Aujourd'hui</span>
+                    </div>
+
+                    <blockquote class="verse-card__text" id="verse-text">
+                        Car Dieu a tant aimé le monde qu'il a donné son Fils unique...
+                    </blockquote>
+
+                    <cite class="verse-card__reference" id="verse-reference">
+                        — Jean 3:16
+                    </cite>
+
+                    <div class="verse-card__actions">
+                        <button class="btn btn-ghost" id="verse-copy">
+                            <i data-lucide="copy"></i>
+                            Copier
+                        </button>
+                        <button class="btn btn-ghost" id="verse-share">
+                            <i data-lucide="share-2"></i>
+                            Partager
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== POURQUOI (FEATURES) ==================== -->
+        <section class="features" id="pourquoi">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">
+                        <i data-lucide="sparkles" style="width:12px;height:12px;"></i>
+                        Pourquoi nous choisir
+                    </span>
+                    <h2 class="section-title">Pourquoi SmartFaith ?</h2>
+                    <p class="section-subtitle">Une approche complète, gratuite et pensée pour t'accompagner dans ta marche avec Dieu</p>
+                </div>
+                <div class="features__grid" id="features-grid">
+                    <!-- Généré par script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== DÉCOUVERTES ==================== -->
+        <section class="discoveries" id="decouvertes">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">
+                        <i data-lucide="lightbulb" style="width:12px;height:12px;"></i>
+                        Le saviez-vous ?
+                    </span>
+                    <h2 class="section-title">Découvertes bibliques</h2>
+                    <p class="section-subtitle">Des faits fascinants qui révèlent la richesse insoupçonnée de la Parole de Dieu</p>
+                </div>
+                <div class="discoveries__grid" id="discoveries-grid">
+                    <!-- Généré par script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PARCOURS ==================== -->
+        <!-- <section class="pathway" id="parcours">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">
+                        <i data-lucide="map" style="width:12px;height:12px;"></i>
+                        Ton parcours spirituel
+                    </span>
+                    <h2 class="section-title">Explore ta foi</h2>
+                    <p class="section-subtitle">3 modes complémentaires pour grandir : Quiz, Thèmes et Histoires</p>
+                </div>
+                <div class="pathway__tabs" id="pathway-tabs">
+                    <button class="pathway__tab active" data-tab="quiz">
+                        <i data-lucide="target"></i>
+                        Quiz
+                    </button>
+                    <button class="pathway__tab" data-tab="themes">
+                        <i data-lucide="palette"></i>
+                        Thèmes
+                    </button>
+                    <button class="pathway__tab" data-tab="stories">
+                        <i data-lucide="book-open"></i>
+                        Histoires
+                    </button>
+                </div>
+                <div class="pathway__slider" id="pathway-slider">
+                  
+                </div>
+            </div>
+        </section> -->
+
+        <!-- ==================== GALERIE ==================== -->
+        <section class="gallery" id="galerie">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">
+                        <i data-lucide="layout" style="width:12px;height:12px;"></i>
+                        Interface
+                    </span>
+                    <h2 class="section-title">Aperçu de l'Application</h2>
+                    <p class="section-subtitle">Découvre l'interface intuitive et soignée de SmartFaith</p>
+                </div>
+                <div class="gallery__wrapper">
+                    <button class="gallery__arrow gallery__arrow--prev" id="gallery-prev" aria-label="Précédent">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <div class="gallery__slider" id="gallery-slider">
+                        <!-- Généré par script.js -->
+                    </div>
+                    <button class="gallery__arrow gallery__arrow--next" id="gallery-next" aria-label="Suivant">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+                <div class="gallery__dots" id="gallery-dots"></div>
+            </div>
+        </section>
+
+        <!-- ==================== COMMENT ÇA MARCHE ==================== -->
+        <section class="how-it-works" id="comment-ca-marche">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">
+                        <i data-lucide="zap" style="width:12px;height:12px;"></i>
+                        Démarrage rapide
+                    </span>
+                    <h2 class="section-title">Comment ça Marche ?</h2>
+                    <p class="section-subtitle">4 étapes simples pour commencer ton parcours spirituel dès aujourd'hui</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline__step fade-in-up">
+                        <div class="timeline__circle"><i data-lucide="download"></i></div>
+                        <div class="timeline__content card">
+                            <span class="timeline__step-number">Étape 01</span>
+                            <h3 class="timeline__title">Télécharge l'application</h3>
+                            <p class="timeline__description">Installe SmartFaith gratuitement depuis l'APK officiel. Aucune inscription requise.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__step fade-in-up">
+                        <div class="timeline__circle"><i data-lucide="compass"></i></div>
+                        <div class="timeline__content card">
+                            <span class="timeline__step-number">Étape 02</span>
+                            <h3 class="timeline__title">Choisis ton parcours</h3>
+                            <p class="timeline__description">Explore les versets, les quiz, les histoires ou les thèmes selon ton inspiration du moment.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__step fade-in-up">
+                        <div class="timeline__circle"><i data-lucide="book-open"></i></div>
+                        <div class="timeline__content card">
+                            <span class="timeline__step-number">Étape 03</span>
+                            <h3 class="timeline__title">Médite et apprends</h3>
+                            <p class="timeline__description">Écoute les versets en audio, sauvegarde tes favoris et découvre des faits fascinants sur la Bible.</p>
+                        </div>
+                    </div>
+                    <div class="timeline__step fade-in-up">
+                        <div class="timeline__circle"><i data-lucide="trophy"></i></div>
+                        <div class="timeline__content card">
+                            <span class="timeline__step-number">Étape 04</span>
+                            <h3 class="timeline__title">Grandis chaque jour</h3>
+                            <p class="timeline__description">Maintiens ta série quotidienne, gagne des pièces et débloque de nouveaux contenus spirituels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FAQ ==================== -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">
+                        <i data-lucide="help-circle" style="width:12px;height:12px;"></i>
+                        Questions fréquentes
+                    </span>
+                    <h2 class="section-title">Questions Fréquentes</h2>
+                    <p class="section-subtitle">Tout ce que tu dois savoir sur SmartFaith</p>
+                </div>
+                <div class="faq__list">
+                    <details class="faq__item card">
+                        <summary class="faq__question">
+                            SmartFaith est-il vraiment 100% gratuit ?
+                            <i data-lucide="chevron-down" class="faq__icon"></i>
+                        </summary>
+                        <div class="faq__answer">
+                            Oui, absolument. Toutes les fonctionnalités sont gratuites : versets, quiz, histoires, prières, favoris. Aucun abonnement, aucun achat obligatoire.
+                        </div>
+                    </details>
+                    <details class="faq__item card">
+                        <summary class="faq__question">
+                            Puis-je utiliser l'application sans connexion internet ?
+                            <i data-lucide="chevron-down" class="faq__icon"></i>
+                        </summary>
+                        <div class="faq__answer">
+                            Oui. 90% de l'application fonctionne hors connexion. Tous les versets, quiz, histoires et prières sont accessibles sans internet.
+                        </div>
+                    </details>
+                    <details class="faq__item card">
+                        <summary class="faq__question">
+                            Quelle traduction de la Bible utilisez-vous ?
+                            <i data-lucide="chevron-down" class="faq__icon"></i>
+                        </summary>
+                        <div class="faq__answer">
+                            SmartFaith utilise la traduction Louis Segond, une référence largement reconnue pour sa fidélité au texte original et sa beauté littéraire.
+                        </div>
+                    </details>
+                    <details class="faq__item card">
+                        <summary class="faq__question">
+                            Combien de contenu l'application contient-elle ?
+                            <i data-lucide="chevron-down" class="faq__icon"></i>
+                        </summary>
+                        <div class="faq__answer">
+                            Plus de 1500 versets classés par thèmes, 1000+ questions de quiz réparties sur 200 niveaux, 50+ histoires bibliques et des dizaines de prières pour chaque situation.
+                        </div>
+                    </details>
+                    <details class="faq__item card">
+                        <summary class="faq__question">
+                            Sur quelles plateformes l'application est-elle disponible ?
+                            <i data-lucide="chevron-down" class="faq__icon"></i>
+                        </summary>
+                        <div class="faq__answer">
+                            Actuellement disponible sur Android via APK direct. La version iOS est en cours de développement et sera disponible prochainement.
+                        </div>
+                    </details>
+                    <details class="faq__item card">
+                        <summary class="faq__question">
+                            Mes favoris et ma progression sont-ils sauvegardés ?
+                            <i data-lucide="chevron-down" class="faq__icon"></i>
+                        </summary>
+                        <div class="faq__answer">
+                            Oui, tous tes favoris, ta progression, ta série quotidienne et tes pièces sont sauvegardés localement sur ton appareil, même hors connexion.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TÉLÉCHARGEMENT ==================== -->
+        <section class="download" id="telechargement">
+            <div class="download__aurora" aria-hidden="true"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" style="color:white;">Prêt à grandir dans la foi ?</h2>
+                    <p class="section-subtitle">Télécharge SmartFaith gratuitement et commence ton parcours spirituel aujourd'hui.</p>
+                </div>
+                <div class="download__buttons">
+                    <a href="./smartFaith.apk" class="btn btn-primary download__btn btn-lg" download>
+                        <i data-lucide="download"></i>
+                        Télécharger SmartFaith (Android)
+                    </a>
+                    <div class="download__ios-info">
+                        <i data-lucide="clock"></i>
+                        <span>Version iOS · Bientôt disponible</span>
+                    </div>
+                </div>
+                <div class="download__trust">
+                    <div class="download__trust-item">
+                        <i data-lucide="shield-check"></i>
+                        <span>Aucune publicité</span>
+                    </div>
+                    <div class="download__trust-item">
+                        <i data-lucide="lock"></i>
+                        <span>Aucune donnée collectée</span>
+                    </div>
+                    <div class="download__trust-item">
+                        <i data-lucide="zap"></i>
+                        <span>Installation rapide</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <a href="#" class="footer__logo">
+                    <img src="img/logo.png" alt="SmartFaith" class="footer__logo-img">
+                    <span>SmartFaith</span>
+                </a>
+                <p class="footer__description">
+                    L'application gratuite pour grandir dans la foi : versets, quiz bibliques, histoires et prières. Pour la gloire de Dieu.
+                </p>
+                <p class="footer__verse">
+                    « Que la grâce et la paix te soient multipliées ! »
+                    <span>— 1 Pierre 1:2</span>
+                </p>
+            </div>
+            <div class="footer__links">
+                <h4 class="footer__heading">Navigation</h4>
+                <ul class="footer__list">
+                    <li><a href="#verset"      class="footer__link">Verset du jour</a></li>
+                    <li><a href="#pourquoi"    class="footer__link">Pourquoi nous</a></li>
+                    <li><a href="#decouvertes" class="footer__link">Découvertes</a></li>
+                    <li><a href="#parcours"    class="footer__link">Parcours</a></li>
+                    <li><a href="#galerie"     class="footer__link">Aperçu</a></li>
+                    <li><a href="#faq"         class="footer__link">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h4 class="footer__heading">Contact</h4>
+                <a href="https://wa.me/237690373513" class="footer__contact-link"
+                   target="_blank" rel="noopener noreferrer">
+                    <i data-lucide="message-circle"></i>
+                    WhatsApp : +237 690 373 513
+                </a>
+                <a href="./smartFaith.apk" class="btn btn-primary footer__download-btn" download>
+                    <i data-lucide="download"></i>
+                    Télécharger l'APK
+                </a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2025 SmartFaith. Tous droits réservés. Fait avec ❤️ pour la gloire de Dieu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BOUTON RETOUR EN HAUT ==================== -->
+    <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- ==================== TOAST ==================== -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>
