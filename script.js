@@ -8,13 +8,14 @@
 /* Phone mockup — 8 écrans phares */
 const PHONE_SCREENSHOTS = [
     'img/onboarding1.png',
-    'img/home.png',
+    'img/home1.png',
     'img/discover.png',
     'img/prayScreen.png',
     'img/storyDetail.png',
     'img/gameScreen.png',
     'img/favorite.png',
     'img/themeDetail.png',
+    'img/sitting.png',
 ];
 
 /* Galerie — 22 screenshots avec légendes spirituelles */
@@ -23,7 +24,8 @@ const GALLERY_SCREENSHOTS = [
     { url: 'img/onboarding2.png',       caption: 'Explorez les Thèmes' },
     { url: 'img/onboarding3.png',       caption: 'Testez vos connaissances' },
     { url: 'img/onboarding4.png',       caption: 'Progressez et decouvrez' },
-    { url: 'img/home.png',              caption: 'Écran d\'accueil' },
+    { url: 'img/home1.png',              caption: 'Écran d\'accueil' },
+    // { url: 'img/home.png',              caption: 'Écran d\'accueil' },
     { url: 'img/discover.png',          caption: 'Découvertes spirituelles' },
     { url: 'img/storyDetail.png',       caption: 'Récit biblique' },
     { url: 'img/prayScreen.png',        caption: 'Espace prière' },
