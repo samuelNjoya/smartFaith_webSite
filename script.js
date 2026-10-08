@@ -19,14 +19,17 @@ const PHONE_SCREENSHOTS = [
 
 /* Galerie — 22 screenshots avec légendes spirituelles */
 const GALLERY_SCREENSHOTS = [
+    { url: 'img/onboarding1.png',       caption: 'Explorerez les histoires' },
+    { url: 'img/onboarding2.png',       caption: 'Explorez les Thèmes' },
+    { url: 'img/onboarding3.png',       caption: 'Testez vos connaissances' },
+    { url: 'img/onboarding4.png',       caption: 'Progressez et decouvrez' },
     { url: 'img/home.png',              caption: 'Écran d\'accueil' },
-    { url: 'img/onboarding1.png',       caption: 'Bienvenue dans SmartFaith' },
     { url: 'img/discover.png',          caption: 'Découvertes spirituelles' },
     { url: 'img/storyDetail.png',       caption: 'Récit biblique' },
     { url: 'img/prayScreen.png',        caption: 'Espace prière' },
     { url: 'img/proverb.png',           caption: 'Proverbes & Sagesse' },
     { url: 'img/liveWithGod.png',       caption: 'Vivre avec Dieu' },
-    { url: 'img/gameScreen.png',        caption: 'Quiz biblique' },
+    { url: 'img/gameScreen2.png',        caption: 'Quiz biblique' },
     { url: 'img/themeDetail.png',       caption: 'Thèmes spirituels' },
     { url: 'img/favorite.png',          caption: 'Vos favoris' },
     { url: 'img/level.png',             caption: 'Progression des niveaux' },
@@ -35,9 +38,9 @@ const GALLERY_SCREENSHOTS = [
     { url: 'img/prayWithPsaumes.png',   caption: 'Prier avec les Psaumes' },
     { url: 'img/story.png',             caption: 'Liste des histoires' },
     { url: 'img/theme.png',             caption: 'Explorer les thèmes' },
-    { url: 'img/sitting.png',           caption: 'Méditation paisible' },
-    { url: 'img/gameScreen2.png',       caption: 'Quiz — Question' },
-    { url: 'img/gameScreen3.png',       caption: 'Quiz — Résultat' },
+    { url: 'img/sitting.png',           caption: 'Paramètres' },
+    { url: 'img/gameScreen3.png',       caption: 'Quiz — -2 options de réponse' },
+    { url: 'img/gameScreen.png',       caption: 'Quiz — Résultat' },
     { url: 'img/favorite2.png',         caption: 'Favoris avancés' },
     { url: 'img/liveWithGod2.png',      caption: 'Vivre avec Dieu' },
     { url: 'img/liveWithGodDetail.png', caption: 'Détail spirituel' },
@@ -47,12 +50,12 @@ const GALLERY_SCREENSHOTS = [
 const FEATURES = [
     {
         icon: 'book-open',
-        title: '1500+ Versets bibliques',
+        title: '4500+ Versets bibliques',
         desc: 'Avec audio et favoris, classés par thèmes et situations de la vie pour t\'accompagner chaque jour.'
     },
     {
         icon: 'target',
-        title: '1000+ Questions de quiz',
+        title: '1500+ Questions de quiz',
         desc: '200 niveaux progressifs pour tester ta connaissance biblique et apprendre en t\'amusant.'
     },
     {
@@ -156,32 +159,6 @@ const DAILY_VERSES = [
     { text: 'Le juste vivra par la foi.', ref: 'Romains 1:17' },
 ];
 
-/* Parcours — 3 onglets */
-const PATHWAY_DATA = {
-    quiz: [
-        { title: 'Niveau 1-20',   level: 'Débutant',       lessons: '20 niveaux' },
-        { title: 'Niveau 21-50',  level: 'Intermédiaire',  lessons: '30 niveaux' },
-        { title: 'Niveau 51-100', level: 'Avancé',         lessons: '50 niveaux' },
-        { title: 'Niveau 101-150',level: 'Expert',         lessons: '50 niveaux' },
-        { title: 'Niveau 151-200',level: 'Maître',         lessons: '50 niveaux' },
-    ],
-    themes: [
-        { title: 'Foi',           level: 'Spirituel',  lessons: '40 versets' },
-        { title: 'Amour',         level: 'Spirituel',  lessons: '35 versets' },
-        { title: 'Espérance',     level: 'Spirituel',  lessons: '32 versets' },
-        { title: 'Persévérance',  level: 'Spirituel',  lessons: '28 versets' },
-        { title: 'Gratitude',     level: 'Spirituel',  lessons: '30 versets' },
-        { title: 'Paix',          level: 'Spirituel',  lessons: '25 versets' },
-    ],
-    stories: [
-        { title: 'Abraham',   level: 'Patriarche',   lessons: 'Père de la foi' },
-        { title: 'Moïse',     level: 'Prophète',     lessons: 'Libérateur' },
-        { title: 'David',     level: 'Roi',          lessons: 'Homme selon Dieu' },
-        { title: 'Esther',    level: 'Reine',        lessons: 'Courage & Foi' },
-        { title: 'Paul',      level: 'Apôtre',       lessons: 'Missionnaire' },
-        { title: 'Ruth',      level: 'Loyauté',      lessons: 'Belle-fille fidèle' },
-    ]
-};
 
 /* Vocabulaire biblique pour les bulles (50 mots) */
 const BUBBLE_WORDS = [
@@ -207,6 +184,7 @@ const BUBBLE_COLORS = [
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     lucide.createIcons();
+      initBurger();          // ← AJOUTER CETTE LIGNE
     initWordBubbles();
     initParticles();
     initFeatures();
@@ -690,4 +668,63 @@ function showToast(message) {
     toast._timer = setTimeout(() => {
         toast.classList.remove('visible');
     }, 2500);
+}
+
+/* ==================== MENU BURGER MOBILE ==================== */
+function initBurger() {
+    const burger = document.getElementById('nav-burger');
+    const menu = document.querySelector('.nav__menu');
+    if (!burger || !menu) return;
+
+    function closeMenu() {
+        menu.classList.remove('nav__menu--open');
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+    }
+
+    function toggleMenu() {
+        const isOpen = menu.classList.contains('nav__menu--open');
+        if (isOpen) {
+            closeMenu();
+        } else {
+            menu.classList.add('nav__menu--open');
+            burger.classList.add('active');
+            burger.setAttribute('aria-expanded', 'true');
+            document.body.classList.add('menu-open');
+        }
+    }
+
+    // Clic sur le burger
+    burger.addEventListener('click', toggleMenu);
+
+    // Clic sur un lien → ferme le menu
+    menu.querySelectorAll('.nav__link').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Clic en dehors → ferme le menu
+    document.addEventListener('click', (e) => {
+        if (
+            menu.classList.contains('nav__menu--open') &&
+            !menu.contains(e.target) &&
+            !burger.contains(e.target)
+        ) {
+            closeMenu();
+        }
+    });
+
+    // Échap → ferme le menu
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('nav__menu--open')) {
+            closeMenu();
+        }
+    });
+
+    // Si l'écran repasse en desktop → ferme le menu
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
 }
